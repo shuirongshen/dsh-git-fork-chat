@@ -17,6 +17,8 @@
 
 [English](README.md) · [简体中文](README.zh.md)
 
+> **第一次用 GitHub？** 看 [保姆级教程：创建公开仓库、登录、推送、持续更新](GITHUB_GUIDE.md)。从注册账号到每天的 `git push` 都有逐步说明。
+
 </div>
 
 ![GitChat 对话树](docs/gitchat-overview.png)

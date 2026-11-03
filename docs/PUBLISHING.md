@@ -1,6 +1,8 @@
 # Publishing GitChat to GitHub
 
-The repository is already initialized with a `main` branch and an initial commit. It has **no remote** yet, and it contains no personal absolute paths.
+> First time using GitHub? Start with the [beginner's click-by-click guide](../GITHUB_GUIDE.md) (Chinese, Windows): account, public repo, authentication, first push, and ongoing updates.
+
+The repository is already initialized with a `main` branch and commits. It has **no remote** yet, and it contains no personal absolute paths.
 
 ## 1. Create an empty repository on GitHub
 

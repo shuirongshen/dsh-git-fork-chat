@@ -17,6 +17,8 @@ fork any turn, inherit the full context, and manage branches visually — withou
 
 [English](README.md) · [简体中文](README.zh.md)
 
+> **New to Git/GitHub?** Read the [beginner's click-by-click guide](GITHUB_GUIDE.md) (Chinese, Windows) for creating a public repo, authenticating, pushing, and keeping it updated.
+
 </div>
 
 ![GitChat conversation tree](docs/gitchat-overview.png)
