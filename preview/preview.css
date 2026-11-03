@@ -1,0 +1,1896 @@
+/* node_modules/@xyflow/react/dist/style.css */
+.react-flow {
+  direction: ltr;
+  --xy-edge-stroke-default: #b1b1b7;
+  --xy-edge-stroke-width-default: 1;
+  --xy-edge-stroke-selected-default: #555;
+  --xy-connectionline-stroke-default: #b1b1b7;
+  --xy-connectionline-stroke-width-default: 1;
+  --xy-attribution-background-color-default: rgba(255, 255, 255, 0.5);
+  --xy-minimap-background-color-default: #fff;
+  --xy-minimap-mask-background-color-default: rgba(240, 240, 240, 0.6);
+  --xy-minimap-mask-stroke-color-default: transparent;
+  --xy-minimap-mask-stroke-width-default: 1;
+  --xy-minimap-node-background-color-default: #e2e2e2;
+  --xy-minimap-node-stroke-color-default: transparent;
+  --xy-minimap-node-stroke-width-default: 2;
+  --xy-background-color-default: transparent;
+  --xy-background-pattern-dots-color-default: #91919a;
+  --xy-background-pattern-lines-color-default: #eee;
+  --xy-background-pattern-cross-color-default: #e2e2e2;
+  background-color: var(--xy-background-color, var(--xy-background-color-default));
+  --xy-node-color-default: inherit;
+  --xy-node-border-default: 1px solid #1a192b;
+  --xy-node-background-color-default: #fff;
+  --xy-node-group-background-color-default: rgba(240, 240, 240, 0.25);
+  --xy-node-boxshadow-hover-default: 0 1px 4px 1px rgba(0, 0, 0, 0.08);
+  --xy-node-boxshadow-selected-default: 0 0 0 0.5px #1a192b;
+  --xy-node-border-radius-default: 3px;
+  --xy-handle-background-color-default: #1a192b;
+  --xy-handle-border-color-default: #fff;
+  --xy-selection-background-color-default: rgba(0, 89, 220, 0.08);
+  --xy-selection-border-default: 1px dotted rgba(0, 89, 220, 0.8);
+  --xy-controls-button-background-color-default: #fefefe;
+  --xy-controls-button-background-color-hover-default: #f4f4f4;
+  --xy-controls-button-color-default: inherit;
+  --xy-controls-button-color-hover-default: inherit;
+  --xy-controls-button-border-color-default: #eee;
+  --xy-controls-box-shadow-default: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+  --xy-edge-label-background-color-default: #ffffff;
+  --xy-edge-label-color-default: inherit;
+  --xy-resize-background-color-default: #3367d9;
+}
+.react-flow.dark {
+  --xy-edge-stroke-default: #3e3e3e;
+  --xy-edge-stroke-width-default: 1;
+  --xy-edge-stroke-selected-default: #727272;
+  --xy-connectionline-stroke-default: #b1b1b7;
+  --xy-connectionline-stroke-width-default: 1;
+  --xy-attribution-background-color-default: rgba(150, 150, 150, 0.25);
+  --xy-minimap-background-color-default: #141414;
+  --xy-minimap-mask-background-color-default: rgba(60, 60, 60, 0.6);
+  --xy-minimap-mask-stroke-color-default: transparent;
+  --xy-minimap-mask-stroke-width-default: 1;
+  --xy-minimap-node-background-color-default: #2b2b2b;
+  --xy-minimap-node-stroke-color-default: transparent;
+  --xy-minimap-node-stroke-width-default: 2;
+  --xy-background-color-default: #141414;
+  --xy-background-pattern-dots-color-default: #555;
+  --xy-background-pattern-lines-color-default: #333;
+  --xy-background-pattern-cross-color-default: #333;
+  --xy-node-color-default: #f8f8f8;
+  --xy-node-border-default: 1px solid #3c3c3c;
+  --xy-node-background-color-default: #1e1e1e;
+  --xy-node-group-background-color-default: rgba(240, 240, 240, 0.25);
+  --xy-node-boxshadow-hover-default: 0 1px 4px 1px rgba(255, 255, 255, 0.08);
+  --xy-node-boxshadow-selected-default: 0 0 0 0.5px #999;
+  --xy-handle-background-color-default: #bebebe;
+  --xy-handle-border-color-default: #1e1e1e;
+  --xy-selection-background-color-default: rgba(200, 200, 220, 0.08);
+  --xy-selection-border-default: 1px dotted rgba(200, 200, 220, 0.8);
+  --xy-controls-button-background-color-default: #2b2b2b;
+  --xy-controls-button-background-color-hover-default: #3e3e3e;
+  --xy-controls-button-color-default: #f8f8f8;
+  --xy-controls-button-color-hover-default: #fff;
+  --xy-controls-button-border-color-default: #5b5b5b;
+  --xy-controls-box-shadow-default: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+  --xy-edge-label-background-color-default: #141414;
+  --xy-edge-label-color-default: #f8f8f8;
+}
+.react-flow__background {
+  background-color: var(--xy-background-color-props, var(--xy-background-color, var(--xy-background-color-default)));
+  pointer-events: none;
+  z-index: -1;
+}
+.react-flow__container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.react-flow__pane {
+  z-index: 1;
+  touch-action: none;
+}
+.react-flow__pane.draggable {
+  cursor: grab;
+}
+.react-flow__pane.dragging {
+  cursor: grabbing;
+}
+.react-flow__pane.selection {
+  cursor: pointer;
+}
+.react-flow__viewport {
+  transform-origin: 0 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.react-flow__renderer {
+  z-index: 4;
+}
+.react-flow__selection {
+  z-index: 6;
+}
+.react-flow__nodesselection-rect:focus,
+.react-flow__nodesselection-rect:focus-visible {
+  outline: none;
+}
+.react-flow__edge-path {
+  stroke: var(--xy-edge-stroke, var(--xy-edge-stroke-default));
+  stroke-width: var(--xy-edge-stroke-width, var(--xy-edge-stroke-width-default));
+  fill: none;
+}
+.react-flow__connection-path {
+  stroke: var(--xy-connectionline-stroke, var(--xy-connectionline-stroke-default));
+  stroke-width: var(--xy-connectionline-stroke-width, var(--xy-connectionline-stroke-width-default));
+  fill: none;
+}
+.react-flow .react-flow__edges {
+  position: absolute;
+}
+.react-flow .react-flow__edges svg {
+  overflow: visible;
+  position: absolute;
+  pointer-events: none;
+}
+.react-flow__edge {
+  pointer-events: visibleStroke;
+}
+.react-flow__edge.selectable {
+  cursor: pointer;
+}
+.react-flow__edge.animated path {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+.react-flow__edge.animated path.react-flow__edge-interaction {
+  stroke-dasharray: none;
+  animation: none;
+}
+.react-flow__edge.inactive {
+  pointer-events: none;
+}
+.react-flow__edge.selected,
+.react-flow__edge:focus,
+.react-flow__edge:focus-visible {
+  outline: none;
+}
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge.selectable:focus .react-flow__edge-path,
+.react-flow__edge.selectable:focus-visible .react-flow__edge-path {
+  stroke: var(--xy-edge-stroke-selected, var(--xy-edge-stroke-selected-default));
+}
+.react-flow__edge-textwrapper {
+  pointer-events: all;
+}
+.react-flow__edge .react-flow__edge-text {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.react-flow__arrowhead polyline {
+  stroke: var(--xy-edge-stroke, var(--xy-edge-stroke-default));
+}
+.react-flow__arrowhead polyline.arrowclosed {
+  fill: var(--xy-edge-stroke, var(--xy-edge-stroke-default));
+}
+.react-flow__connection {
+  pointer-events: none;
+}
+.react-flow__connection .animated {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+svg.react-flow__connectionline {
+  z-index: 1001;
+  overflow: visible;
+  position: absolute;
+}
+.react-flow__nodes {
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+.react-flow__node {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: all;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+.react-flow__node.selectable {
+  cursor: pointer;
+}
+.react-flow__node.draggable {
+  cursor: grab;
+  pointer-events: all;
+}
+.react-flow__node.draggable.dragging {
+  cursor: grabbing;
+}
+.react-flow__nodesselection {
+  z-index: 3;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.react-flow__nodesselection-rect {
+  position: absolute;
+  pointer-events: all;
+  cursor: grab;
+}
+.react-flow__handle {
+  position: absolute;
+  pointer-events: none;
+  min-width: 5px;
+  min-height: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--xy-handle-background-color, var(--xy-handle-background-color-default));
+  border: 1px solid var(--xy-handle-border-color, var(--xy-handle-border-color-default));
+  border-radius: 100%;
+}
+.react-flow__handle.connectingfrom {
+  pointer-events: all;
+}
+.react-flow__handle.connectionindicator {
+  pointer-events: all;
+  cursor: crosshair;
+}
+.react-flow__handle-bottom {
+  top: auto;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+.react-flow__handle-top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.react-flow__handle-left {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.react-flow__handle-right {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.react-flow__edgeupdater {
+  cursor: move;
+  pointer-events: all;
+}
+.react-flow__pane.selection .react-flow__panel {
+  pointer-events: none;
+}
+.react-flow__panel {
+  position: absolute;
+  z-index: 5;
+  margin: 15px;
+}
+.react-flow__panel.top {
+  top: 0;
+}
+.react-flow__panel.bottom {
+  bottom: 0;
+}
+.react-flow__panel.top.center,
+.react-flow__panel.bottom.center {
+  left: 50%;
+  transform: translateX(-15px) translateX(-50%);
+}
+.react-flow__panel.left {
+  left: 0;
+}
+.react-flow__panel.right {
+  right: 0;
+}
+.react-flow__panel.left.center,
+.react-flow__panel.right.center {
+  top: 50%;
+  transform: translateY(-15px) translateY(-50%);
+}
+.react-flow__attribution {
+  font-size: 10px;
+  background: var(--xy-attribution-background-color, var(--xy-attribution-background-color-default));
+  padding: 2px 3px;
+  margin: 0;
+}
+.react-flow__attribution a {
+  text-decoration: none;
+  color: #999;
+}
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+}
+.react-flow__edgelabel-renderer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  left: 0;
+  top: 0;
+}
+.react-flow__viewport-portal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.react-flow__minimap {
+  background: var( --xy-minimap-background-color-props, var(--xy-minimap-background-color, var(--xy-minimap-background-color-default)) );
+}
+.react-flow__minimap-svg {
+  display: block;
+}
+.react-flow__minimap-mask {
+  fill: var( --xy-minimap-mask-background-color-props, var(--xy-minimap-mask-background-color, var(--xy-minimap-mask-background-color-default)) );
+  stroke: var( --xy-minimap-mask-stroke-color-props, var(--xy-minimap-mask-stroke-color, var(--xy-minimap-mask-stroke-color-default)) );
+  stroke-width: var( --xy-minimap-mask-stroke-width-props, var(--xy-minimap-mask-stroke-width, var(--xy-minimap-mask-stroke-width-default)) );
+}
+.react-flow__minimap-node {
+  fill: var( --xy-minimap-node-background-color-props, var(--xy-minimap-node-background-color, var(--xy-minimap-node-background-color-default)) );
+  stroke: var( --xy-minimap-node-stroke-color-props, var(--xy-minimap-node-stroke-color, var(--xy-minimap-node-stroke-color-default)) );
+  stroke-width: var( --xy-minimap-node-stroke-width-props, var(--xy-minimap-node-stroke-width, var(--xy-minimap-node-stroke-width-default)) );
+}
+.react-flow__background-pattern.dots {
+  fill: var( --xy-background-pattern-color-props, var(--xy-background-pattern-color, var(--xy-background-pattern-dots-color-default)) );
+}
+.react-flow__background-pattern.lines {
+  stroke: var( --xy-background-pattern-color-props, var(--xy-background-pattern-color, var(--xy-background-pattern-lines-color-default)) );
+}
+.react-flow__background-pattern.cross {
+  stroke: var( --xy-background-pattern-color-props, var(--xy-background-pattern-color, var(--xy-background-pattern-cross-color-default)) );
+}
+.react-flow__controls {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--xy-controls-box-shadow, var(--xy-controls-box-shadow-default));
+}
+.react-flow__controls.horizontal {
+  flex-direction: row;
+}
+.react-flow__controls-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  width: 26px;
+  padding: 4px;
+  border: none;
+  background: var(--xy-controls-button-background-color, var(--xy-controls-button-background-color-default));
+  border-bottom: 1px solid var( --xy-controls-button-border-color-props, var(--xy-controls-button-border-color, var(--xy-controls-button-border-color-default)) );
+  color: var( --xy-controls-button-color-props, var(--xy-controls-button-color, var(--xy-controls-button-color-default)) );
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.react-flow__controls-button svg {
+  width: 100%;
+  max-width: 12px;
+  max-height: 12px;
+  fill: currentColor;
+}
+.react-flow__edge.updating .react-flow__edge-path {
+  stroke: #777;
+}
+.react-flow__edge-text {
+  font-size: 10px;
+}
+.react-flow__node.selectable:focus,
+.react-flow__node.selectable:focus-visible {
+  outline: none;
+}
+.react-flow__node-input,
+.react-flow__node-default,
+.react-flow__node-output,
+.react-flow__node-group {
+  padding: 10px;
+  border-radius: var(--xy-node-border-radius, var(--xy-node-border-radius-default));
+  width: 150px;
+  font-size: 12px;
+  color: var(--xy-node-color, var(--xy-node-color-default));
+  text-align: center;
+  border: var(--xy-node-border, var(--xy-node-border-default));
+  background-color: var(--xy-node-background-color, var(--xy-node-background-color-default));
+}
+.react-flow__node-input.selectable:hover,
+.react-flow__node-default.selectable:hover,
+.react-flow__node-output.selectable:hover,
+.react-flow__node-group.selectable:hover {
+  box-shadow: var(--xy-node-boxshadow-hover, var(--xy-node-boxshadow-hover-default));
+}
+.react-flow__node-input.selectable.selected,
+.react-flow__node-input.selectable:focus,
+.react-flow__node-input.selectable:focus-visible,
+.react-flow__node-default.selectable.selected,
+.react-flow__node-default.selectable:focus,
+.react-flow__node-default.selectable:focus-visible,
+.react-flow__node-output.selectable.selected,
+.react-flow__node-output.selectable:focus,
+.react-flow__node-output.selectable:focus-visible,
+.react-flow__node-group.selectable.selected,
+.react-flow__node-group.selectable:focus,
+.react-flow__node-group.selectable:focus-visible {
+  box-shadow: var(--xy-node-boxshadow-selected, var(--xy-node-boxshadow-selected-default));
+}
+.react-flow__node-group {
+  background-color: var(--xy-node-group-background-color, var(--xy-node-group-background-color-default));
+}
+.react-flow__nodesselection-rect,
+.react-flow__selection {
+  background: var(--xy-selection-background-color, var(--xy-selection-background-color-default));
+  border: var(--xy-selection-border, var(--xy-selection-border-default));
+}
+.react-flow__nodesselection-rect:focus,
+.react-flow__nodesselection-rect:focus-visible,
+.react-flow__selection:focus,
+.react-flow__selection:focus-visible {
+  outline: none;
+}
+.react-flow__controls-button:hover {
+  background: var( --xy-controls-button-background-color-hover-props, var(--xy-controls-button-background-color-hover, var(--xy-controls-button-background-color-hover-default)) );
+  color: var( --xy-controls-button-color-hover-props, var(--xy-controls-button-color-hover, var(--xy-controls-button-color-hover-default)) );
+}
+.react-flow__controls-button:disabled {
+  pointer-events: none;
+}
+.react-flow__controls-button:disabled svg {
+  fill-opacity: 0.4;
+}
+.react-flow__controls-button:last-child {
+  border-bottom: none;
+}
+.react-flow__controls.horizontal .react-flow__controls-button {
+  border-bottom: none;
+  border-right: 1px solid var( --xy-controls-button-border-color-props, var(--xy-controls-button-border-color, var(--xy-controls-button-border-color-default)) );
+}
+.react-flow__controls.horizontal .react-flow__controls-button:last-child {
+  border-right: none;
+}
+.react-flow__resize-control {
+  position: absolute;
+}
+.react-flow__resize-control.left,
+.react-flow__resize-control.right {
+  cursor: ew-resize;
+}
+.react-flow__resize-control.top,
+.react-flow__resize-control.bottom {
+  cursor: ns-resize;
+}
+.react-flow__resize-control.top.left,
+.react-flow__resize-control.bottom.right {
+  cursor: nwse-resize;
+}
+.react-flow__resize-control.bottom.left,
+.react-flow__resize-control.top.right {
+  cursor: nesw-resize;
+}
+.react-flow__resize-control.handle {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  background-color: var(--xy-resize-background-color, var(--xy-resize-background-color-default));
+  translate: -50% -50%;
+}
+.react-flow__resize-control.handle.left {
+  left: 0;
+  top: 50%;
+}
+.react-flow__resize-control.handle.right {
+  left: 100%;
+  top: 50%;
+}
+.react-flow__resize-control.handle.top {
+  left: 50%;
+  top: 0;
+}
+.react-flow__resize-control.handle.bottom {
+  left: 50%;
+  top: 100%;
+}
+.react-flow__resize-control.handle.top.left {
+  left: 0;
+}
+.react-flow__resize-control.handle.bottom.left {
+  left: 0;
+}
+.react-flow__resize-control.handle.top.right {
+  left: 100%;
+}
+.react-flow__resize-control.handle.bottom.right {
+  left: 100%;
+}
+.react-flow__resize-control.line {
+  border-color: var(--xy-resize-background-color, var(--xy-resize-background-color-default));
+  border-width: 0;
+  border-style: solid;
+}
+.react-flow__resize-control.line.left,
+.react-flow__resize-control.line.right {
+  width: 1px;
+  transform: translate(-50%, 0);
+  top: 0;
+  height: 100%;
+}
+.react-flow__resize-control.line.left {
+  left: 0;
+  border-left-width: 1px;
+}
+.react-flow__resize-control.line.right {
+  left: 100%;
+  border-right-width: 1px;
+}
+.react-flow__resize-control.line.top,
+.react-flow__resize-control.line.bottom {
+  height: 1px;
+  transform: translate(0, -50%);
+  left: 0;
+  width: 100%;
+}
+.react-flow__resize-control.line.top {
+  top: 0;
+  border-top-width: 1px;
+}
+.react-flow__resize-control.line.bottom {
+  border-bottom-width: 1px;
+  top: 100%;
+}
+.react-flow__edge-textbg {
+  fill: var(--xy-edge-label-background-color, var(--xy-edge-label-background-color-default));
+}
+.react-flow__edge-text {
+  fill: var(--xy-edge-label-color, var(--xy-edge-label-color-default));
+}
+
+/* src/client/style.css */
+.gc-root {
+  --gc-bg: var(--dsw-alias-bg-base, #fff);
+  --gc-surface: var(--dsw-alias-bg-layer-1, #fff);
+  --gc-surface-2: var(--dsw-alias-bg-layer-2, #f4f4f5);
+  --gc-surface-3: var(--dsw-alias-bg-layer-3, #ececee);
+  --gc-border: var(--dsw-alias-border-l2, #e2e2e4);
+  --gc-border-strong: var(--dsw-alias-border-l3, #cfcfd3);
+  --gc-text: var(--dsw-alias-label-primary, #17171a);
+  --gc-text-2: var(--dsw-alias-label-secondary, #61616a);
+  --gc-text-3: var(--dsw-alias-label-tertiary, #91919a);
+  --gc-brand: var(--dsw-alias-button-info-fill, var(--dsw-alias-state-business-primary, #4d6bfe));
+  --gc-primary-fill: var(--dsw-alias-button-primary-fill, #4d6bfe);
+  --gc-primary-fg: var(--dsw-alias-label-primary-inverted, #fff);
+  --gc-primary-hover: var(--dsw-alias-button-primary-hover, #3b55e6);
+  --gc-danger: var(--dsw-alias-state-error-primary, #e5484d);
+  --gc-success: var(--dsw-alias-state-success-primary, #2f9e63);
+  --gc-warning: var(--dsw-alias-state-warn-primary, #e49a20);
+  --gc-idle: var(--dsw-alias-state-idle-primary, #9a9aa2);
+  --gc-hover: var(--dsw-alias-interactive-bg-hover, rgba(127, 127, 140, 0.09));
+  --gc-active: var(--dsw-alias-interactive-bg-active, rgba(127, 127, 140, 0.15));
+  --gc-menu: var(--dsw-specific-menu, var(--gc-surface));
+  --gc-shadow: var(--dsw-shadow-lv3, 0 12px 32px rgba(0, 0, 0, 0.14));
+  --gc-grid: var(--dsw-alias-border-l1, #d9d9de);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  background: var(--gc-bg);
+  color: var(--gc-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.gc-root *,
+.gc-root *::before,
+.gc-root *::after {
+  box-sizing: border-box;
+}
+.gc-root button {
+  font-family: inherit;
+}
+.gc-root :focus-visible {
+  outline: 2px solid var(--gc-brand);
+  outline-offset: 2px;
+}
+.gc-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--gc-border);
+  background:
+    linear-gradient(
+      180deg,
+      var(--gc-surface) 0%,
+      var(--gc-bg) 100%);
+  flex: 0 0 auto;
+  min-height: 54px;
+}
+.gc-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.gc-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gc-brand);
+  background: color-mix(in srgb, var(--gc-brand) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gc-brand) 22%, transparent);
+  flex: none;
+}
+.gc-brand-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.gc-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--gc-text);
+  line-height: 1.25;
+}
+.gc-brand-tag {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gc-brand);
+  border: 1px solid color-mix(in srgb, var(--gc-brand) 30%, transparent);
+  border-radius: 4px;
+  padding: 0 3px;
+  line-height: 13px;
+}
+.gc-brand-subtitle {
+  min-width: 0;
+  max-width: 52vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  color: var(--gc-text-2);
+}
+.gc-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.gc-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 3px;
+}
+.gc-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--gc-surface-2);
+  color: var(--gc-text-2);
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.gc-stat strong {
+  color: var(--gc-text);
+  font-weight: 600;
+}
+.gc-icon-btn {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--dsw-alias-label-secondary, var(--gc-text-2));
+  cursor: pointer;
+  transition:
+    background 0.12s ease,
+    color 0.12s ease,
+    border-color 0.12s ease;
+  flex: none;
+}
+.gc-icon-btn:hover {
+  background: var(--dsw-alias-interactive-bg-hover, var(--gc-hover));
+  color: var(--dsw-alias-label-primary, var(--gc-text));
+}
+.gc-icon-btn:active {
+  background: var(--gc-active);
+}
+.gc-icon-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.gc-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 0 9px;
+  border-radius: 999px;
+  border: 1px solid var(--dsw-alias-border-l2, var(--gc-border));
+  background: var(--gc-surface);
+  color: var(--dsw-alias-label-secondary, var(--gc-text-2));
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    color 0.12s ease;
+}
+.gc-chip-btn:hover {
+  background: var(--dsw-alias-interactive-bg-hover, var(--gc-hover));
+  color: var(--dsw-alias-label-primary, var(--gc-text));
+}
+.gc-chip-btn[aria-pressed=true] {
+  background: var(--dsw-alias-button-ghost-active-fill, color-mix(in srgb, var(--gc-brand) 9%, var(--gc-surface)));
+  border-color: var(--dsw-alias-button-ghost-active-border, color-mix(in srgb, var(--gc-brand) 35%, var(--gc-border)));
+  color: var(--dsw-alias-state-business-primary, var(--gc-brand));
+}
+.gc-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--gc-surface-2);
+  color: inherit;
+  font-size: 9.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.gc-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--gc-border);
+  margin: 0 2px;
+  flex: none;
+}
+.gc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid var(--dsw-alias-border-l2, var(--gc-border));
+  background: var(--gc-surface);
+  color: var(--dsw-alias-label-primary, var(--gc-text));
+  font-size: 11.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    color 0.12s ease,
+    opacity 0.12s ease;
+}
+.gc-btn:hover {
+  background: var(--dsw-alias-interactive-bg-hover, var(--gc-hover));
+  border-color: var(--dsw-alias-border-l3, var(--gc-border-strong));
+}
+.gc-btn:active {
+  background: var(--dsw-alias-interactive-bg-active, var(--gc-active));
+}
+.gc-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.gc-btn-primary {
+  background: var(--gc-primary-fill);
+  border-color: transparent;
+  color: var(--gc-primary-fg);
+}
+.gc-btn-primary:hover {
+  background: var(--gc-primary-hover);
+  border-color: transparent;
+}
+.gc-btn-primary:disabled:hover {
+  background: var(--gc-primary-fill);
+}
+.gc-btn-danger {
+  color: var(--gc-danger);
+  border-color: color-mix(in srgb, var(--gc-danger) 30%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-danger) 6%, var(--gc-surface));
+}
+.gc-btn-danger:hover {
+  background: color-mix(in srgb, var(--gc-danger) 12%, var(--gc-surface));
+  border-color: color-mix(in srgb, var(--gc-danger) 50%, var(--gc-border));
+}
+.gc-btn-ghost {
+  border-color: transparent;
+  background: transparent;
+  color: var(--gc-text-2);
+}
+.gc-btn-ghost:hover {
+  background: var(--gc-hover);
+  border-color: transparent;
+  color: var(--gc-text);
+}
+.gc-spin {
+  animation: gc-spin 0.9s linear infinite;
+}
+@keyframes gc-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.gc-tip-anchor {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+.gc-tip-anchor.is-block {
+  display: flex;
+  flex: 1 1 100%;
+}
+.gc-tip-anchor.is-block > .gc-btn {
+  width: 100%;
+}
+.gc-tooltip {
+  --gc-tooltip-bg: var(--dsw-alias-tooltip-bg, #202027);
+  --gc-tooltip-fg: var(--dsw-alias-tooltip-label, #ffffff);
+  position: fixed;
+  z-index: 900;
+  max-width: min(280px, calc(100vw - 16px));
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: var(--gc-tooltip-bg);
+  color: var(--gc-tooltip-fg);
+  box-shadow: var(--dsw-shadow-lv2, 0 6px 18px rgba(0, 0, 0, 0.18));
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  animation: gc-tooltip-in 0.12s ease;
+}
+.gc-tooltip.is-bottom {
+  transform: translate(-50%, 0);
+}
+.gc-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background: var(--gc-tooltip-bg);
+  transform: translateX(-50%) rotate(45deg);
+}
+.gc-tooltip.is-bottom::after {
+  top: -4px;
+  bottom: auto;
+}
+@keyframes gc-tooltip-in {
+  from {
+    opacity: 0;
+    margin-top: 2px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.gc-banner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--gc-warning) 26%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-warning) 9%, var(--gc-bg));
+  color: var(--gc-text-2);
+  font-size: 11.5px;
+  flex: 0 0 auto;
+}
+.gc-banner svg {
+  color: var(--gc-warning);
+  flex: none;
+}
+.gc-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  position: relative;
+}
+.gc-canvas {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+  background:
+    radial-gradient(
+      1200px 500px at 50% 0%,
+      color-mix(in srgb, var(--gc-brand) 4%, transparent),
+      transparent 70%),
+    var(--gc-bg);
+}
+.gc-loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 6;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--gc-brand) 12%, transparent);
+}
+.gc-loading-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gc-brand),
+      transparent);
+  animation: gc-loading 1.1s ease-in-out infinite;
+}
+@keyframes gc-loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.gc-state {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 32px;
+  text-align: center;
+  color: var(--gc-text-2);
+  background: color-mix(in srgb, var(--gc-bg) 86%, transparent);
+  backdrop-filter: blur(1.5px);
+}
+.gc-state-error {
+  color: var(--gc-text-2);
+}
+.gc-state-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gc-danger);
+  background: color-mix(in srgb, var(--gc-danger) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gc-danger) 22%, transparent);
+}
+.gc-state h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gc-text);
+}
+.gc-state p {
+  margin: 0;
+  max-width: 420px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--gc-text-2);
+  word-break: break-word;
+}
+.gc-state-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+.gc-empty {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px;
+  text-align: center;
+  pointer-events: none;
+}
+.gc-empty svg {
+  color: var(--gc-brand);
+  opacity: 0.55;
+  margin-bottom: 2px;
+}
+.gc-empty h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gc-text);
+}
+.gc-empty p {
+  margin: 0;
+  max-width: 360px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--gc-text-2);
+}
+.gc-canvas .react-flow {
+  --xy-background-color: transparent;
+  --xy-edge-stroke: var(--gc-border-strong);
+  --xy-edge-stroke-width: 2;
+  --xy-connectionline-stroke: var(--gc-brand);
+  --xy-minimap-background-color: var(--gc-surface);
+  --xy-controls-button-background-color: var(--gc-surface);
+  --xy-controls-button-background-color-hover: var(--gc-hover);
+  --xy-controls-button-color: var(--gc-text-2);
+  --xy-controls-button-color-hover: var(--gc-text);
+  --xy-controls-button-border-color: var(--gc-border);
+  --xy-attribution-background-color: transparent;
+}
+.gc-canvas .react-flow__node {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: auto;
+}
+.gc-canvas .react-flow__node:focus-visible {
+  outline: none;
+}
+.gc-canvas .react-flow__handle {
+  width: 5px;
+  height: 5px;
+  min-width: 5px;
+  min-height: 5px;
+  border: none;
+  background: var(--gc-accent, var(--gc-border-strong));
+  opacity: 0;
+  pointer-events: none;
+}
+.gc-canvas .react-flow__edge-path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.15s ease, opacity 0.15s ease;
+}
+.gc-canvas .react-flow__edge.is-archived .react-flow__edge-path {
+  opacity: 0.5;
+}
+.gc-canvas .react-flow__controls {
+  border: 1px solid var(--gc-border);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: var(--gc-shadow);
+  background: var(--gc-surface);
+}
+.gc-canvas .react-flow__controls-button {
+  width: 26px;
+  height: 26px;
+  border-bottom: 1px solid var(--gc-border);
+  background: var(--gc-surface);
+  color: var(--gc-text-2);
+}
+.gc-canvas .react-flow__controls-button:last-child {
+  border-bottom: none;
+}
+.gc-canvas .react-flow__controls-button:hover {
+  background: var(--gc-hover);
+  color: var(--gc-text);
+}
+.gc-canvas .react-flow__controls-button svg {
+  fill: currentColor;
+}
+.gc-canvas .react-flow__minimap {
+  border: 1px solid var(--gc-border);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: var(--gc-shadow);
+  background: var(--gc-surface);
+}
+.gc-canvas .react-flow__minimap-mask {
+  fill: color-mix(in srgb, var(--gc-bg) 62%, transparent);
+}
+.gc-canvas .react-flow__attribution {
+  background: transparent;
+  color: var(--gc-text-3);
+  font-size: 9px;
+  opacity: 0.55;
+}
+.gc-canvas .react-flow__attribution a {
+  color: inherit;
+}
+.gc-canvas .react-flow__panel {
+  margin: 10px;
+}
+.gc-node {
+  --gc-accent: var(--gc-brand);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 280px;
+  height: 124px;
+  padding: 9px 11px 8px;
+  border: 1px solid var(--gc-border);
+  border-left: 3px solid var(--gc-accent);
+  border-radius: 12px;
+  background: var(--gc-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    border-color 0.12s ease,
+    box-shadow 0.12s ease,
+    transform 0.12s ease,
+    opacity 0.12s ease;
+}
+.gc-node:hover {
+  border-color: color-mix(in srgb, var(--gc-accent) 45%, var(--gc-border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--gc-accent) 18%, transparent), 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+.gc-node.is-selected {
+  border-color: var(--gc-brand);
+  box-shadow: 0 0 0 2px var(--gc-brand), 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.gc-node.is-current {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--gc-brand) 45%, transparent), 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.gc-node.is-selected.is-current {
+  box-shadow: 0 0 0 2px var(--gc-brand), 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.gc-node.is-archived {
+  opacity: 0.62;
+  filter: saturate(0.55);
+  border-left-style: dashed;
+}
+.gc-node.is-archived:hover {
+  opacity: 0.82;
+}
+.gc-node-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: none;
+}
+.gc-node-turn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 15px;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--gc-accent) 12%, transparent);
+  color: var(--gc-accent);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.gc-node-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 10.5px;
+  color: var(--gc-text-2);
+}
+.gc-node-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gc-idle);
+  box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 14%, transparent);
+}
+.gc-node-dot.is-completed {
+  background: var(--gc-success);
+  color: var(--gc-success);
+}
+.gc-node-dot.is-error {
+  background: var(--gc-danger);
+  color: var(--gc-danger);
+}
+.gc-node-dot.is-running {
+  background: var(--gc-warning);
+  color: var(--gc-warning);
+  animation: gc-pulse 1.6s ease-in-out infinite;
+}
+.gc-node-dot.is-interrupted,
+.gc-node-dot.is-blocked {
+  background: var(--gc-idle);
+  color: var(--gc-idle);
+}
+@keyframes gc-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.gc-node-user {
+  flex: none;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--gc-text);
+  word-break: break-word;
+}
+.gc-node-assistant {
+  flex: none;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: var(--gc-text-2);
+  word-break: break-word;
+}
+.gc-node-assistant.is-empty {
+  color: var(--gc-text-3);
+  font-style: italic;
+}
+.gc-node-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--gc-text-3);
+  font-size: 9.5px;
+  white-space: nowrap;
+  flex: none;
+}
+.gc-node-branches {
+  color: var(--gc-accent);
+  font-weight: 600;
+}
+.gc-node-badge {
+  margin-left: auto;
+  flex: none;
+  padding: 0 4px;
+  border-radius: 3px;
+  border: 1px solid var(--gc-border);
+  background: var(--gc-surface-2);
+  color: var(--gc-text-2);
+  font-size: 8.5px;
+  line-height: 13px;
+}
+.gc-node-badge-current {
+  margin-left: 0;
+  color: var(--gc-brand);
+  border-color: color-mix(in srgb, var(--gc-brand) 30%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-brand) 9%, var(--gc-surface));
+}
+.gc-node-badge-archived {
+  margin-left: 0;
+  color: var(--gc-warning);
+  border-color: color-mix(in srgb, var(--gc-warning) 30%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-warning) 10%, var(--gc-surface));
+}
+.gc-node-kind-root {
+  height: 92px;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--gc-brand) 11%, transparent),
+      transparent 62%),
+    var(--gc-surface);
+  border-left-color: var(--gc-brand);
+}
+.gc-node-kind-root .gc-node-turn {
+  color: var(--gc-brand);
+  background: color-mix(in srgb, var(--gc-brand) 13%, transparent);
+}
+.gc-node-root-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+  min-height: 0;
+}
+.gc-node-root-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gc-text);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gc-node-root-meta {
+  font-size: 10px;
+  color: var(--gc-text-2);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gc-node-kind-branch {
+  height: 96px;
+  border-style: dashed;
+  border-left-style: solid;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      color-mix(in srgb, var(--gc-accent) 3%, transparent) 0 8px,
+      transparent 8px 16px),
+    var(--gc-surface);
+}
+.gc-node-branch-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 3px;
+  min-width: 0;
+}
+.gc-node-branch-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gc-text);
+}
+.gc-node-branch-hint {
+  font-size: 10.5px;
+  color: var(--gc-text-2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+.gc-node-kind-branch.is-error .gc-node-branch-label {
+  color: var(--gc-danger);
+}
+.gc-detail {
+  flex: 0 0 380px;
+  width: 380px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--gc-border);
+  background: var(--gc-surface);
+  animation: gc-detail-in 0.18s ease;
+}
+@keyframes gc-detail-in {
+  from {
+    transform: translateX(8px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.gc-detail-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.gc-detail-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 28px;
+  text-align: center;
+  color: var(--gc-text-2);
+}
+.gc-detail-empty svg {
+  color: var(--gc-brand);
+  opacity: 0.45;
+  margin-bottom: 2px;
+}
+.gc-detail-empty h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gc-text);
+}
+.gc-detail-empty p {
+  margin: 0;
+  max-width: 250px;
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+.gc-detail-head {
+  flex: none;
+  padding: 13px 14px 10px;
+  border-bottom: 1px solid var(--gc-border);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.gc-detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+.gc-detail-title-row h2 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--gc-text);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gc-turn-badge {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 5px;
+  border: 1px solid var(--gc-border);
+  background: var(--gc-surface-2);
+  color: var(--gc-text-2);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-variant-numeric: tabular-nums;
+}
+.gc-detail-close {
+  width: 26px;
+  height: 26px;
+  flex: none;
+}
+.gc-detail-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.gc-status,
+.gc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 999px;
+  border: 1px solid var(--gc-border);
+  background: var(--gc-surface-2);
+  color: var(--gc-text-2);
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.gc-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.gc-status.is-completed {
+  color: var(--gc-success);
+  border-color: color-mix(in srgb, var(--gc-success) 28%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-success) 8%, var(--gc-surface));
+}
+.gc-status.is-error {
+  color: var(--gc-danger);
+  border-color: color-mix(in srgb, var(--gc-danger) 28%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-danger) 8%, var(--gc-surface));
+}
+.gc-status.is-running {
+  color: var(--gc-warning);
+  border-color: color-mix(in srgb, var(--gc-warning) 30%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-warning) 9%, var(--gc-surface));
+}
+.gc-status.is-interrupted,
+.gc-status.is-blocked,
+.gc-status.is-unknown {
+  color: var(--gc-text-2);
+}
+.gc-pill.is-accent {
+  color: var(--gc-brand);
+  border-color: color-mix(in srgb, var(--gc-brand) 30%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-brand) 8%, var(--gc-surface));
+}
+.gc-pill.is-archived {
+  color: var(--gc-warning);
+  border-color: color-mix(in srgb, var(--gc-warning) 30%, var(--gc-border));
+  background: color-mix(in srgb, var(--gc-warning) 9%, var(--gc-surface));
+}
+.gc-detail-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 12px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  scrollbar-width: thin;
+}
+.gc-detail-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.gc-detail-scroll::-webkit-scrollbar-thumb {
+  background: var(--gc-border-strong);
+  border-radius: 999px;
+  border: 2px solid var(--gc-surface);
+}
+.gc-meta-grid {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 5px 8px;
+  align-items: baseline;
+  padding: 9px 10px;
+  border: 1px solid var(--gc-border);
+  border-radius: 9px;
+  background: var(--gc-surface-2);
+  font-size: 10.5px;
+}
+.gc-meta-key {
+  color: var(--gc-text-3);
+  white-space: nowrap;
+}
+.gc-meta-value {
+  min-width: 0;
+  color: var(--gc-text-2);
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.gc-meta-value code {
+  font-family: var(--dsh-font-family-code, ui-monospace, SFMono-Regular, Consolas, monospace);
+  font-size: 10px;
+  color: var(--gc-text);
+  background: var(--gc-surface-3);
+  border-radius: 3px;
+  padding: 0 3px;
+}
+.gc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.gc-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--gc-text-2);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.gc-section-head .gc-section-time {
+  color: var(--gc-text-3);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+.gc-message {
+  max-height: 260px;
+  overflow: auto;
+  padding: 9px 11px;
+  border: 1px solid var(--gc-border);
+  border-radius: 9px;
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+  font-size: 12px;
+  line-height: 1.62;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  scrollbar-width: thin;
+}
+.gc-message::-webkit-scrollbar {
+  width: 8px;
+}
+.gc-message::-webkit-scrollbar-thumb {
+  background: var(--gc-border-strong);
+  border-radius: 999px;
+  border: 2px solid var(--gc-surface-2);
+}
+.gc-message-user {
+  background: color-mix(in srgb, var(--gc-brand) 6%, var(--gc-surface));
+  border-color: color-mix(in srgb, var(--gc-brand) 18%, var(--gc-border));
+}
+.gc-message-empty {
+  color: var(--gc-text-3);
+  font-style: italic;
+}
+.gc-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0 2px;
+  color: var(--gc-text-3);
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+.gc-hint svg {
+  flex: none;
+  margin-top: 1px;
+}
+.gc-hint-warning {
+  color: var(--gc-warning);
+}
+.gc-detail-actions {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--gc-border);
+  background: var(--gc-surface);
+}
+.gc-detail-actions .gc-btn {
+  height: 31px;
+  font-size: 11px;
+}
+.gc-detail-actions .gc-action-main {
+  flex: 1 1 100%;
+}
+.gc-detail-actions .gc-action-icon {
+  width: 31px;
+  padding: 0;
+  flex: none;
+}
+.gc-toast {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  max-width: min(620px, calc(100% - 32px));
+  padding: 9px 12px;
+  border: 1px solid var(--gc-border);
+  border-radius: 10px;
+  background: var(--gc-menu);
+  box-shadow: var(--gc-shadow);
+  color: var(--gc-text);
+  font-size: 11.5px;
+  line-height: 1.5;
+  animation: gc-toast-in 0.16s ease;
+  word-break: break-word;
+}
+.gc-toast svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--gc-success);
+}
+.gc-toast.is-error svg {
+  color: var(--gc-danger);
+}
+.gc-toast.is-error {
+  border-color: color-mix(in srgb, var(--gc-danger) 32%, var(--gc-border));
+}
+@keyframes gc-toast-in {
+  from {
+    transform: translate(-50%, 6px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+.gc-modal-backdrop {
+  --gc-bg: var(--dsw-alias-bg-base, #fff);
+  --gc-surface: var(--dsw-alias-bg-layer-1, #fff);
+  --gc-surface-2: var(--dsw-alias-bg-layer-2, #f4f4f5);
+  --gc-border: var(--dsw-alias-border-l2, #e2e2e4);
+  --gc-border-strong: var(--dsw-alias-border-l3, #cfcfd3);
+  --gc-text: var(--dsw-alias-label-primary, #17171a);
+  --gc-text-2: var(--dsw-alias-label-secondary, #61616a);
+  --gc-text-3: var(--dsw-alias-label-tertiary, #91919a);
+  --gc-brand: var(--dsw-alias-button-info-fill, var(--dsw-alias-state-business-primary, #4d6bfe));
+  --gc-primary-fill: var(--dsw-alias-button-primary-fill, #4d6bfe);
+  --gc-primary-fg: var(--dsw-alias-label-primary-inverted, #fff);
+  --gc-primary-hover: var(--dsw-alias-button-primary-hover, #3b55e6);
+  --gc-danger: var(--dsw-alias-state-error-primary, #e5484d);
+  --gc-success: var(--dsw-alias-state-success-primary, #2f9e63);
+  --gc-warning: var(--dsw-alias-state-warn-primary, #e49a20);
+  --gc-hover: var(--dsw-alias-interactive-bg-hover, rgba(127, 127, 140, 0.09));
+  --gc-active: var(--dsw-alias-interactive-bg-active, rgba(127, 127, 140, 0.15));
+  --gc-menu: var(--dsw-specific-menu, var(--gc-surface));
+  --gc-shadow: var(--dsw-shadow-lv3, 0 12px 32px rgba(0, 0, 0, 0.14));
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(2px);
+  animation: gc-fade-in 0.14s ease;
+}
+.gc-modal-backdrop button:focus-visible {
+  outline: 2px solid var(--gc-brand);
+  outline-offset: 2px;
+}
+@keyframes gc-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.gc-modal {
+  width: min(460px, 100%);
+  border: 1px solid var(--gc-border);
+  border-radius: 14px;
+  background: var(--gc-menu);
+  box-shadow: var(--gc-shadow);
+  padding: 18px;
+  color: var(--gc-text);
+  animation: gc-modal-in 0.16s ease;
+}
+@keyframes gc-modal-in {
+  from {
+    transform: translateY(6px) scale(0.985);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.gc-modal h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gc-text);
+}
+.gc-modal h3 svg {
+  color: var(--gc-warning);
+  flex: none;
+}
+.gc-modal p {
+  margin: 0 0 16px;
+  color: var(--gc-text-2);
+  font-size: 12px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.gc-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+@media (max-width: 1180px) {
+  .gc-stats {
+    display: none;
+  }
+  .gc-brand-subtitle {
+    max-width: 38vw;
+  }
+}
+@media (max-width: 960px) {
+  .gc-detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    width: min(380px, 94vw);
+    box-shadow: var(--gc-shadow);
+    animation: gc-detail-overlay-in 0.18s ease;
+  }
+  .gc-detail.is-empty {
+    display: none;
+  }
+  @keyframes gc-detail-overlay-in {
+    from {
+      transform: translateX(24px);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .gc-brand-subtitle {
+    display: none;
+  }
+  .gc-toolbar {
+    gap: 6px;
+    padding: 8px 10px;
+  }
+  .gc-divider {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .gc-btn-label {
+    display: none;
+  }
+  .gc-btn {
+    width: 30px;
+    padding: 0;
+  }
+  .gc-btn-primary {
+    width: 30px;
+  }
+  .gc-chip-btn {
+    padding: 0 8px;
+  }
+  .gc-chip-btn .gc-chip-text {
+    display: none;
+  }
+  .gc-detail {
+    width: 100%;
+  }
+  .gc-brand-tag {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gc-root *,
+  .gc-root *::before,
+  .gc-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

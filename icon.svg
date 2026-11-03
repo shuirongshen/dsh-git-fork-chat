@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="gitchat-bg" x1="72" y1="48" x2="448" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5d7cff" />
+      <stop offset="1" stop-color="#3b55e6" />
+    </linearGradient>
+    <linearGradient id="gitchat-glow" x1="96" y1="80" x2="340" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="116" fill="url(#gitchat-bg)" />
+  <rect x="16" y="16" width="480" height="480" rx="116" fill="url(#gitchat-glow)" />
+  <g fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M168 148v216" opacity="0.96" />
+    <path d="M168 232h86a62 62 0 0 0 62-62V148" opacity="0.96" />
+    <path d="M168 348h34a62 62 0 0 0 62-62v-16" opacity="0.6" />
+  </g>
+  <g fill="#ffffff">
+    <circle cx="168" cy="142" r="34" />
+    <circle cx="316" cy="142" r="34" />
+    <circle cx="168" cy="370" r="34" />
+    <circle cx="316" cy="268" r="26" opacity="0.72" />
+  </g>
+  <g fill="#3b55e6">
+    <circle cx="306" cy="132" r="5" />
+    <circle cx="316" cy="132" r="5" />
+    <circle cx="326" cy="132" r="5" />
+  </g>
+</svg>

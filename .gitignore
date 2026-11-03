@@ -1,0 +1,22 @@
+# Dependencies and local tooling
+node_modules/
+.pnpm-store/
+*.log
+*.tsbuildinfo
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Test / preview scratch
+browser-screenshots/
+test-out.log
+coverage/
+
+# Built artifacts are intentionally tracked:
+#   lib/           host + browser bundles
+#   preview/*.js   standalone preview bundle
+#   preview/*.css  standalone preview styles
+#   docs/*.png|gif screenshots and demo
