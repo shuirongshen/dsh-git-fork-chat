@@ -2,13 +2,15 @@
 
 > First time using GitHub? Start with the [beginner's click-by-click guide](../GITHUB_GUIDE.md) (Chinese, Windows): account, public repo, authentication, first push, and ongoing updates.
 
-The repository is already initialized with a `main` branch and commits. It has **no remote** yet, and it contains no personal absolute paths.
+> **Status:** already published at <https://github.com/shuirongshen/dsh-git-fork-chat>. The steps below are kept as a checklist for creating a fresh mirror or re-publishing after a rename.
+
+The repository is initialized with a `main` branch and commits. It is already connected to `origin`, and it contains no personal absolute paths.
 
 ## 1. Create an empty repository on GitHub
 
-Create `dsh-gitchat` on GitHub. Do **not** initialize it with a README, `.gitignore`, or license — the local repository already contains them.
+Create `dsh-git-fork-chat` on GitHub. Do **not** initialize it with a README, `.gitignore`, or license — the local repository already contains them.
 
-Use the name `dsh-gitchat` and a short description such as:
+Use the name `dsh-git-fork-chat` and a short description such as:
 
 > Git-like conversation trees for DeepSeek Harness: fork any turn, inherit the full context, archive dead ends, and export the whole tree.
 
@@ -26,7 +28,7 @@ ai-agents
 ## 2. Push from the local checkout
 
 ```bash
-git remote add origin https://github.com/<your-username>/dsh-gitchat.git
+git remote add origin https://github.com/shuirongshen/dsh-git-fork-chat.git
 git branch -M main
 git push -u origin main
 ```
@@ -34,14 +36,14 @@ git push -u origin main
 For SSH:
 
 ```bash
-git remote add origin git@github.com:<your-username>/dsh-gitchat.git
+git remote add origin git@github.com:shuirongshen/dsh-git-fork-chat.git
 git push -u origin main
 ```
 
 If the remote already exists:
 
 ```bash
-git remote set-url origin https://github.com/<your-username>/dsh-gitchat.git
+git remote set-url origin https://github.com/shuirongshen/dsh-git-fork-chat.git
 git push -u origin main
 ```
 
@@ -59,7 +61,7 @@ Then create a GitHub Release from the tag and attach the repository source. The 
 If `gh` is installed and authenticated:
 
 ```bash
-gh repo create dsh-gitchat --public --source=. --remote=origin --push
+gh repo create dsh-git-fork-chat --public --source=. --remote=origin --push
 ```
 
 This creates the remote, adds `origin`, and pushes `main` in one step.

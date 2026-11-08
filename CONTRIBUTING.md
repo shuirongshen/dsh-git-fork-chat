@@ -6,7 +6,7 @@ Thanks for taking a look. GitChat is a native DeepSeek Harness plugin; the goal 
 
 ```bash
 git clone <your-fork-url>
-cd dsh-gitchat
+cd dsh-git-fork-chat
 pnpm install
 pnpm build
 pnpm typecheck

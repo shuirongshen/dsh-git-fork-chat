@@ -187,8 +187,8 @@ Native `title` attributes are slow, and disabled buttons do not fire pointer eve
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-username>/dsh-gitchat.git
-cd dsh-gitchat
+git clone https://github.com/shuirongshen/dsh-git-fork-chat.git
+cd dsh-git-fork-chat
 pnpm install
 pnpm build
 ```
